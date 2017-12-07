@@ -12,5 +12,5 @@ deploy:
 - provider: NuGet
   server: nuget.org
   api_key:
-    secure: 5XsCPhzHSChTdym1nwcZps3YxhZqySNztlUeT1rWtMmvrDM+R+WzxUkrYiMLBUVs
+    secure: Fmmz/4Nyx73LFFQ75iOvA5giJtyri/Utyqi/mV9T5eCwMNtSkNHUGaYdsMMm2hFR
     skip_symbols: true
