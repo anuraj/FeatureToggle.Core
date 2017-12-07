@@ -3,10 +3,12 @@ image: Visual Studio 2017
 build:
   verbosity: minimal
 build_script:
-- dotnet restore FeatureToggle.Core.csproj
-- dotnet pack -c Release -o Output FeatureToggle.Core.csproj
+- dotnet restore source/FeatureToggle.Core.csproj
+- dotnet pack -c Release -o Output source/FeatureToggle.Core.csproj
+test_script:
+- cmd: dotnet test test/FeatureToggle.Core.Tests.csproj
 artifacts:
-- path: '\Output\*.nupkg'
+- path: '\source\Output\*.nupkg'
   name: Nuget Deploy
 deploy:
 - provider: NuGet
