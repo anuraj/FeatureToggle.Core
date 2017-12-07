@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <PackageId>FeatureToggle.Core</PackageId>
+    <PackageId>FeatureToggleCore</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>Anuraj</Authors>
     <Company>dotnetthoughts</Company>
