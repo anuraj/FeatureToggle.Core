@@ -1,17 +1,16 @@
-version: 1.0.{build}
+version: 2.0.{build}
 image: Visual Studio 2017
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
 build:
-  publish_nuget: true
   verbosity: minimal
+build_script:
+- dotnet restore FeatureToggle.Core.csproj
+- dotnet pack -c Release -o Output FeatureToggle.Core.csproj
+artifacts:
+- path: '\Output\*.nupkg'
+  name: Nuget Deploy
 deploy:
 - provider: NuGet
+  server: nuget.org
   api_key:
     secure: 5XsCPhzHSChTdym1nwcZps3YxhZqySNztlUeT1rWtMmvrDM+R+WzxUkrYiMLBUVs
+    skip_symbols: true
