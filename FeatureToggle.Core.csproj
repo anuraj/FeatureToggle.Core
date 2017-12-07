@@ -2,14 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <PackageId>FeatureToggle.Core.Anuraj</PackageId>
+    <PackageId>FeatureToggle.Core</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>Anuraj</Authors>
+    <Company>dotnetthoughts</Company>
     <Description>A minimal Feature Toggle Framework for ASP.NET Core</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
-    <Copyright>Copyright 2017 (c) Anuraj P. All rights reserved.</Copyright>
+    <Copyright>Copyright 2017 (c) dotnetthoughts. All rights reserved.</Copyright>
     <PackageTags>ASPNETCore FeatureToggle</PackageTags>
+    <PackageLicenseUrl>https://github.com/anuraj/FeatureToggle.Core/blob/master/license</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/anuraj/FeatureToggle.Core</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/anuraj/FeatureToggle.Core/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/anuraj/FeatureToggle.Core</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageReleaseNotes>Version 1.0.0 - Initial version.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
