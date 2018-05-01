@@ -1,1 +1,5 @@
 .vscode
+.suo
+coverage.xml
+storage.ide
+db.lock

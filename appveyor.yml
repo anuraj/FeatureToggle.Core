@@ -2,6 +2,9 @@ version: 2.0.{build}
 image: Visual Studio 2017
 build:
   verbosity: minimal
+install:
+- ps: Start-FileDownload "https://github.com/SonarSource/sonar-scanner-msbuild/releases/download/4.2.0.1214/sonar-scanner-msbuild-4.2.0.1214-netcoreapp2.0.zip"
+- cmd: 7z e sonar-scanner-msbuild-4.2.0.1214-netcoreapp2.0.zip
 build_script:
 - dotnet restore source/FeatureToggle.Core.csproj
 - dotnet pack -c Release -o Output source/FeatureToggle.Core.csproj
