@@ -10,11 +10,11 @@ install:
 - cmd: 7z x sonar-scanner-msbuild-4.2.0.1214-netcoreapp2.0.zip
 build_script:
 - dotnet restore source/FeatureToggle.Core.csproj
-- dotnet "SonarScanner.MSBuild.dll" begin /k:"FeatureToggle.Core" /d:sonar.organization="anuraj-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%logintoken% /d:sonar.exclusions="/wwwroot/lib/**" /d:sonar.cs.opencover.reportsPaths="C:/projects/featuretoggle-core/test/coverage.xml" /d:sonar.test.exclusions="C:/projects/featuretoggle-core/test/**"
+- dotnet "SonarScanner.MSBuild.dll" begin /k:"FeatureToggle.Core" /d:sonar.organization="anuraj-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%logintoken% /d:sonar.exclusions="/wwwroot/lib/**" /d:sonar.cs.opencover.reportsPaths="C:/projects/featuretoggle-core/test/coverage.xml" /d:sonar.test.exclusions="C:/projects/featuretoggle-core/test/*.cs"
 - dotnet build
 - dotnet pack -c Release -o Output source/FeatureToggle.Core.csproj
 test_script:
-- cmd: dotnet test test/FeatureToggle.Core.Tests.csproj  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"C:/projects/featuretoggle-core/test/**\"
+- cmd: dotnet test test/FeatureToggle.Core.Tests.csproj  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"C:/projects/featuretoggle-core/test/*.cs\"
 - cmd: dotnet "SonarScanner.MSBuild.dll" end /d:sonar.login=%logintoken%
 artifacts:
 - path: '\source\Output\*.nupkg'
