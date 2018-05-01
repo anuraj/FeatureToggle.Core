@@ -1,5 +1,9 @@
-.vscode
+.vscode/
 .suo
-coverage.xml
+coverage*.xml
 storage.ide
 db.lock
+.vs/
+.sonarqube/
+obj
+bin
