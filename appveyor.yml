@@ -14,7 +14,7 @@ build_script:
 - dotnet build
 - dotnet pack -c Release -o Output source/FeatureToggle.Core.csproj
 test_script:
-- cmd: dotnet test test/FeatureToggle.Core.Tests.csproj  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"./test/**\"
+- cmd: dotnet test test/FeatureToggle.Core.Tests.csproj  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude=\"test/**\"
 - cmd: dotnet "SonarScanner.MSBuild.dll" end /d:sonar.login=%logintoken%
 artifacts:
 - path: '\source\Output\*.nupkg'
