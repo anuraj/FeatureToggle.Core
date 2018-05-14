@@ -12,7 +12,7 @@ build_script:
 - dotnet restore source/FeatureToggle.Core/FeatureToggle.Core.csproj
 - dotnet "SonarScanner.MSBuild.dll" begin /k:"FeatureToggle.Core" /d:sonar.organization="anuraj-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=%logintoken% /d:sonar.exclusions="/wwwroot/lib/**" /d:sonar.cs.opencover.reportsPaths="C:/projects/featuretoggle-core/test/FeatureToggle.Core.Tests/coverage.xml" /d:sonar.test.exclusions="test/**"
 - dotnet build
-- dotnet pack -c Release -o Output source/FeatureToggle.Core.csproj
+- dotnet pack -c Release -o Output source/FeatureToggle.Core/FeatureToggle.Core.csproj
 test_script:
 - cmd: dotnet test test/FeatureToggle.Core.Tests/FeatureToggle.Core.Tests.csproj  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 - cmd: dotnet "SonarScanner.MSBuild.dll" end /d:sonar.login=%logintoken%
@@ -23,5 +23,5 @@ deploy:
 - provider: NuGet
   server: nuget.org
   api_key:
-    secure: Fmmz/4Nyx73LFFQ75iOvA5giJtyri/Utyqi/mV9T5eCwMNtSkNHUGaYdsMMm2hFR
+    secure: ailk/KPscyMWMXLEuizGE0EC1iIvsjHS7AS0DUjCSwcf3MWta8aXSGjCwsgqH+WV
     skip_symbols: true
