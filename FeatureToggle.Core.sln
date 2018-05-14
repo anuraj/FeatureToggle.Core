@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggle.Core", "source\FeatureToggle.Core.csproj", "{FFB65EB6-9E38-4068-9F77-A2D3F610E4C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggle.Core", "source\FeatureToggle.Core\FeatureToggle.Core.csproj", "{FFB65EB6-9E38-4068-9F77-A2D3F610E4C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggle.Core.Tests", "test\FeatureToggle.Core.Tests.csproj", "{83B308D5-8848-4A38-AF4E-7A82FAB8A53B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureToggle.Core.Tests", "test\FeatureToggle.Core.Tests\FeatureToggle.Core.Tests.csproj", "{83B308D5-8848-4A38-AF4E-7A82FAB8A53B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
